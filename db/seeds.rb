@@ -7,3 +7,17 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+# Define the number of users you want to create
+number_of_users = 10
+
+# Create users using Faker
+number_of_users.times do
+  User.create!(
+    name: Faker::Name.name,
+    email: Faker::Internet.email,
+    password: 'banana123' # You can set a default password for all users
+  )
+end
+
+puts "Seed data generated successfully!"

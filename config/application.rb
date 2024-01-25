@@ -28,5 +28,6 @@ module QueroBooksApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.session_store :active_record_store, key: 'quero_book_session'
   end
 end
